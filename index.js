@@ -9,10 +9,10 @@ server.use(express.json());
 
 function verificarNomeSobrenome(req, res, next) {
     if (!req.body.name || !req.body.lastname) {
-    return res.status(400).json({ error: 'Insira nome e sobrenome!' });
-    // middleware local que irá checar se as propriedades name e lastname 
-    //foram informadas corretamente,
-    // caso negativo, irá retornar um erro 400 – BAD REQUEST
+        return res.status(400).json({ error: 'Insira nome e sobrenome!' });
+        // middleware local que irá checar se as propriedades name e lastname 
+        //foram informadas corretamente,
+        // caso negativo, irá retornar um erro 400 – BAD REQUEST
     }
     return next(); // se o nome for informado corretamente, a função next() chama as próximas ações
     }
